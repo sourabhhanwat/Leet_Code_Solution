@@ -1,0 +1,11 @@
+class Solution:
+    def maxIceCream(self, costs: List[int], coins: int) -> int:
+        c = 0
+        n = 0
+        for i in sorted(costs):
+            c = c + i
+            if c > coins:
+                break
+            else:
+                n = n+1
+        return n
