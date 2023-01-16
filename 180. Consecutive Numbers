@@ -1,0 +1,5 @@
+
+select distinct num as 'ConsecutiveNums' 
+from logs m
+where num = (select num from logs x where x.id=m.id+1)
+and num = (select num from logs x where x.id=m.id+2);
