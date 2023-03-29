@@ -1,0 +1,6 @@
+class Solution:
+    def maxSatisfaction(self, satisfaction: List[int]) -> int:
+
+        s = list(accumulate(sorted(satisfaction,reverse = True)))
+        
+        return sum(n for n in s if n > 0)
